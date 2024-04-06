@@ -39,13 +39,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.content
+import com.yveskalume.geminidemo.ui.theme.AppConstants
 import com.yveskalume.geminidemo.ui.theme.GeminidemoTheme
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
-    val generativeModel = GenerativeModel(
+    private val generativeModel = GenerativeModel(
         modelName = "gemini-pro-vision",
-        apiKey = "AIzaSyATYBDY4nkf-MfucZ-iozcRicYBZBF4evg"
+        apiKey = AppConstants.apiKey
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
